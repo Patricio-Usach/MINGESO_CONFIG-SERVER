@@ -25,7 +25,7 @@ spring:
      uri: lb://Horarios
      predicates:
       - path=/horario/**
-   - id: Empleados
-     uri: lb://Empleados
+   - id: empleado
+     uri: lb://empleado
      predicates:
       - path=/empleado/**

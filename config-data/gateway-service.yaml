@@ -1,31 +1,31 @@
 server:
- port: 8003
+  port: 8003
   
 eureka:
- client:
-  fetch-registry: true
-  register-with-eureka: true
-  service-url:
-   default-zona: http://localhost:8761/eureka
- instance:
-  hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zona: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
 
 spring:
- cloud:
-  gateway:
-   discovery:
-    locator:
-     enabled: true
-   routes:
-   - id: Reportes
-     uri: lb://Reportes
-     predicates:
-      - path=/reporte/**
-   - id: Horarios
-     uri: lb://Horarios
-     predicates:
-      - path=/horario/**
-   - id: empleado
-     uri: lb://empleado
-     predicates:
-      - path=/empleado/**
+  cloud:
+    gateway:
+      discovery:
+        locator:
+           enabled: true
+      routes:
+        - id: Reportes
+          uri: lb://Reportes
+          predicates:
+            - path=/reporte/**
+        - id: Horarios
+          uri: lb://Horarios
+          predicates:
+            - path=/horario/**
+        - id: empleado
+          uri: lb://empleado
+          predicates:
+            - path=/empleado/**

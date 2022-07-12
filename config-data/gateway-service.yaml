@@ -26,6 +26,6 @@ spring:
           predicates:
             - path=/horario/**
         - id: empleado
-          uri: lb:http://empleado/
+          uri: lb:http://localhost:58513/empleado/all
           predicates:
             - path=/empleado/**
